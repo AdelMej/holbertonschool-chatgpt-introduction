@@ -16,7 +16,8 @@ class Checkbook:
     def deposit(self, amount):
         """
         Function Description:
-            Adds a specified amount to the checkbook balance and prints the updated balance.
+            Adds a specified amount to the checkbook balance
+            and prints the updated balance.
 
         Parameters:
             amount (float): The amount of money to deposit.
@@ -31,7 +32,8 @@ class Checkbook:
     def withdraw(self, amount):
         """
         Function Description:
-            Subtracts a specified amount from the checkbook balance if sufficient funds exist, 
+            Subtracts a specified amount from the checkbook
+            balance if sufficient funds exist,
             otherwise prints an error message.
 
         Parameters:
@@ -74,7 +76,10 @@ def main():
     """
     cb = Checkbook()
     while True:
-        action = input("What would you like to do? (deposit, withdraw, balance, exit): ").strip().lower()
+        action = input(
+            "What would you like to do? (deposit, withdraw, balance, exit): "
+        )
+        action.strip().lower()
         if action == 'exit':
             print("Goodbye!")
             break
@@ -105,6 +110,6 @@ def main():
         else:
             print("Invalid command. Please try again.")
 
+
 if __name__ == "__main__":
     main()
-
